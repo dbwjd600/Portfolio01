@@ -57,6 +57,7 @@ img {
     transform: translate(-50%);
   }
   .close {
+    display: none;
     position: absolute;
     top: 7%;
     right: 14%;
@@ -83,14 +84,7 @@ img {
   .close div span:nth-of-type(3) {
     transform: translateY(100%);
   }
-  .close.active {
-    display: none;
-  }
-  .open.active {
-    display: block;
-  }
   .open {
-    display: none;
     position: absolute;
     top: 5%;
     right: 14%;
@@ -109,12 +103,6 @@ img {
   .open ul li:nth-of-type(2) {
     position: relative;
   }
-  .open ul li:nth-of-type(2):hover div {
-    display: block;
-  }
-  .open ul li:nth-of-type(2) div.active {
-    display: block;
-  }
   .open ul li:nth-of-type(2) div {
     width: 190px;
     position: absolute;
@@ -127,24 +115,18 @@ img {
     font-size: 14px;
     color: #C0E5FF;
   }
-  .open ul li:nth-of-type(2) div a:hover {
+  .open ul li:nth-of-type(2) div a:hover,
+.open ul li:nth-of-type(2) div a.active {
     color: #0294FD;
     font-weight: bold;
   }
-  .open ul li:nth-of-type(2) div a.active {
-    color: #0294FD;
-    font-weight: bold;
-  }
-  .open ul a {
+  .open ul li a {
     margin: 10px;
     color: #B9BDFF;
     font-size: 25px;
   }
-  .open ul a:hover {
-    color: #0210FD;
-    font-weight: bold;
-  }
-  .open ul a.active {
+  .open ul li a:hover,
+.open ul li a.active {
     color: #0210FD;
     font-weight: bold;
   }
@@ -630,8 +612,8 @@ img {
   }
   .sub2 .s2 .ani-1 div {
     transform: translateY(100%);
-    -webkit-animation: ani-1 1s cubic-bezier(0.32, -0.48, 0.69, 1.52) forwards;
-            animation: ani-1 1s cubic-bezier(0.32, -0.48, 0.69, 1.52) forwards;
+    -webkit-animation: ani-1 0.8s cubic-bezier(0.32, -0.48, 0.69, 1.52) forwards;
+            animation: ani-1 0.8s cubic-bezier(0.32, -0.48, 0.69, 1.52) forwards;
   }
   @-webkit-keyframes ani-1 {
     100% {
