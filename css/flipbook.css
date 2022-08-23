@@ -1,0 +1,9 @@
+
+#flipbook{
+    width: 65%;
+    height: 580px;
+    overflow: hidden;
+}
+#flipbook img{
+    width: 100%;
+}
