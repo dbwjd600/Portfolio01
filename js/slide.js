@@ -1,12 +1,11 @@
 
-
 $(".slide").slick({
   dots: false,
   arrows:false,
   centerMode: true,
   slidesToShow: 1,
   autoplay:true,
-  autoplaySpeed:1800,
+  autoplaySpeed:2000,
   cssEase:'ease'
 });
 
@@ -15,5 +14,3 @@ $('.center').slick({
   centerPadding: '60px',
   slidesToShow: 1
 });
-
-

@@ -468,6 +468,10 @@
     .close{
         top: 8.5%; right: 14%;
     }
+    .bottom{
+        position: absolute;
+        bottom: -99%;
+    }
     .fb{
         padding-right: 160px;
     }
@@ -565,21 +569,21 @@
                 opacity: 40%;
                 transform: perspective(1400px) rotateX(60deg);
                 position: relative;
-                width: 50%;
+                width: 25%;
                 img{
                     width: 80%;
                 }
                 &:hover{
                     opacity: 100%;
-                    transform: perspective(1400px) rotateX(0deg);
-                    width: 60%;
+                    transform: rotateX(0deg);
+                    width: 50%;
                     img{
-                        width: 80%;
+                        width: 50%;
                     }
                 }
                 &::after{
                     content:'';
-                    width: 75%; height: 30%;
+                    width: 50%; height: 30%;
                     background-color: rgba(181, 181, 181, 0.4);
                     position: absolute; left: 2%; bottom:1.5%;
                     z-index:-1;
@@ -593,6 +597,109 @@
         }
         .w1-3{
             margin-bottom: -80px;
+        }
+    }
+    .detail{
+        width: 65%;
+        margin: 300px auto;
+        .wd1{
+            margin: 5px auto !important;
+            p{
+                img{
+                    width: 50% !important;
+                }
+            }
+        }
+        .wd2{
+            margin: 60px auto !important;
+            p{
+                width: 100%;
+                img{
+                    width: 70% !important;
+                }
+            }
+        }
+        .d1{
+            margin: 20px auto 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                &:nth-of-type(2){
+                    position:relative;
+                    white-space: pre-line;
+                    font-family: $font3;
+                    text-align: right;
+                    &::before{
+                        content: '';
+                        display: inline-block;
+                        width: 15px;
+                        height: 5px;
+                        background-color: #0294FD;
+                        position: absolute;
+                        top: -350%;
+                        right: 0%;
+                    }
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        width: 15px;
+                        height: 5px;
+                        background-color: #0294FD;
+                        position: absolute;
+                        bottom: -350%;
+                        right: 0%;
+                    }   
+                }
+                &:nth-of-type(1){
+                    width: 50%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .d2{
+            margin: 200px auto;
+            padding-bottom: 200px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                &:nth-of-type(1){
+                    position:relative;
+                    white-space: pre-line;
+                    font-family: $font3;
+                    &::before{
+                        content: '';
+                        display: inline-block;
+                        width: 15px;
+                        height: 5px;
+                        background-color: #0294FD;
+                        position: absolute;
+                        top: -350%;
+                        left: 0%;
+                    }
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        width: 15px;
+                        height: 5px;
+                        background-color: #0294FD;
+                        position: absolute;
+                        bottom: -350%;
+                        left: 0%;
+                    }   
+                }
+                &:nth-of-type(2){
+                    width: 50%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
