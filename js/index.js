@@ -20,6 +20,7 @@ menuBox();
 function scroll(){
     let posY;
     let scrollTop;
+    let winH = $(window).height();
 
     $(window).on('scroll', function () {
         scrollTop = $(window).scrollTop();
@@ -27,7 +28,7 @@ function scroll(){
         $('.scroll').each(function (i) {
             posY = $('.scroll').eq(i).offset().top;
 
-            if (posY = scrollTop) {
+            if (posY - winH < scrollTop) {
                 $('.scroll').eq(i).addClass('active');
             }
         });
@@ -79,4 +80,3 @@ window.addEventListener('mouseover',function(e){
     }
 });
 document.body.style.cursor = 'none';
-
