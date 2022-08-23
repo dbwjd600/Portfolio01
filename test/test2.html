@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>canvas mousecursor</title>
+</head>
+<body>
+
+    <div id="readout"></div>
+    <canvas id="myCanvas" width=800 height = 600 style = "border: 1px dotted blue"></canvas>
+
+<script>
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var readout = document.getElementById('readout');
+    var spritesheet = new Image();
+
+    
+    function windowToCanvas(canvas, x, y) {
+        var bbox = canvas.getBoundingClientRect(); //viewport 기준으로 나의 위치 알려줌
+
+        return { x: x - bbox.left * (canvas.width / bbox.width),
+                 y: y - bbox.top * (canvas.height / bbox.height)
+        };
+    }
+
+
+    function drawBackground() { //바탕에 회색 줄 그리기
+        var VERTICAL_LINE_SPACING = 12; //줄 간격
+        var i = ctx.canvas.height;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = "lightgray";
+        ctx.lineWidth = 0.5;
+
+        while (i > VERTICAL_LINE_SPACING * 4)
+        {   ctx.beginPath();
+            ctx.moveTo(0, i);
+            ctx.lineTo(ctx.canvas.width, i);
+            ctx.stroke();
+            i -= VERTICAL_LINE_SPACING;
+        }};
+
+
+    function drawGuidelines(x, y) {
+        ctx.strokeStyle = 'rgba(0, 0, 230, 0.8)';
+        ctx.lineWidth = 0.5;
+        drawVerticalLine(x);
+        drawHorizontalLine(y);
+    }
+
+
+    function updateReadout(x, y) { //div 부분에 좌표 입력
+        readout.innerText = '(' + x.toFixed(0) + ',' + y.toFixed(0) + ')';
+    }
+
+
+    function drawHorizontalLine (y) { //마우스 있는 곳에 가로 선 그리기(파랑)
+        ctx.beginPath();
+        ctx.moveTo(0, y + 0.5);
+        ctx.lineTo(ctx.canvas.width, y + 0.5);
+        ctx.stroke();
+    }
+
+
+    function drawVerticalLine (x) { //세로 선 그리기
+        ctx.beginPath();
+        ctx.moveTo(x + 0.5, 0);
+        ctx.lineTo(x + 0.5, ctx.canvas.height);
+        ctx.stroke();
+    }
+
+
+    canvas.onmousemove = function (e) { //마우스가 canvas 위에 있을 때 함수 실행
+        var loc = windowToCanvas(canvas, e.clientX, e.clientY);
+        //e.clientX: 마우스의 x좌표값, e.clicentY: 마우스 y좌표값
+
+        drawBackground();
+        drawGuidelines(loc.x, loc.y);
+        updateReadout(loc.x, loc.y);
+
+    };
+
+    drawBackground(); 
+
+</script>
+
+</body>
+
+</html>

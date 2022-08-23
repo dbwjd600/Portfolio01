@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>test</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script defer src="index.js"></script>
+    <link href="./css/index.css" rel="stylesheet"> -->
+    <style>
+        a{               
+            margin: 10px;
+            color: #B9BDFF;
+            font-size: 25px;       
+        }
+        a.active { 
+            margin: 10px;
+            font-size: 25px;   
+            color:#000; }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <a>work 1</a>
+        <a href="https://www.naver.com/" target="_blank">work 2</a>
+        <a >work 3</a>
+    </div>
+
+    <script>
+        // $("a").click(function() {
+        //     $(this).toggleClass("active");
+        // });
+
+    $('a').click(function(){
+        if($(this).hasClass('active')){
+            $('a').removeClass('active');     
+
+        } else {
+            $('a').removeClass('active');
+
+            $(this).addClass('active');
+
+        }
+
+    });
+    </script>
+
+
+</body>
+</html>
