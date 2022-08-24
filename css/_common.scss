@@ -205,6 +205,19 @@ canvas{
     opacity: 1;
     transform: translateY(0%);
 }
+.box2{
+    div{
+        right: -32%;
+        top: -111%;
+    }
+}
+small{
+    display: inline-block;
+    right: 0; bottom: 35%;
+    transform: rotate(90deg);
+    font-size: 11px;
+    position: fixed;
+}
 }
 
 ///////////////////////////////////mobile/////////////////////////////////

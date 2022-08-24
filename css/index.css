@@ -218,6 +218,18 @@ img {
     opacity: 1;
     transform: translateY(0%);
   }
+  .box2 div {
+    right: -32%;
+    top: -111%;
+  }
+  small {
+    display: inline-block;
+    right: 0;
+    bottom: 35%;
+    transform: rotate(90deg);
+    font-size: 11px;
+    position: fixed;
+  }
 }
 @media all and (max-width: 376px) {
   .circle {
@@ -624,18 +636,6 @@ img {
   .sub2 .close {
     top: 6.5%;
     right: 14%;
-  }
-  .sub2 .box2 div {
-    right: -32%;
-    top: -111%;
-  }
-  .sub2 small {
-    display: inline-block;
-    right: 0;
-    bottom: 35%;
-    transform: rotate(90deg);
-    font-size: 11px;
-    position: fixed;
   }
   .sub2 .s2 {
     padding-top: 13%;
