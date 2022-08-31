@@ -438,18 +438,6 @@ img {
     -webkit-animation: ani-1 1s cubic-bezier(0.32, -0.48, 0.69, 1.52) forwards;
             animation: ani-1 1s cubic-bezier(0.32, -0.48, 0.69, 1.52) forwards;
   }
-  .main .m1 .m1-info .mob {
-    width: 100px;
-    font-size: 20px;
-    color: #0210fd;
-    display: inline-block;
-    border: 2px solid #0210fd;
-    border-radius: 20%;
-    text-align: center;
-  }
-  .main .m1 .m1-info .web {
-    display: none;
-  }
   .main .m1 .m1-info span {
     text-transform: uppercase;
   }
@@ -473,6 +461,7 @@ img {
     font-weight: bold;
     color: #000;
     text-transform: capitalize;
+    padding-top: 40px;
   }
   .main .m1 .m1-info p:nth-of-type(2) {
     font-size: 55px;
@@ -482,7 +471,7 @@ img {
     margin-bottom: 20px;
   }
   .main .m1 .m1-info p:nth-of-type(3) {
-    font-size: 16px;
+    font-size: 20px;
     color: #000;
   }
   .main .m2 {
@@ -1134,18 +1123,6 @@ img {
     -webkit-animation: ani-1 1s cubic-bezier(0.32, -0.48, 0.69, 1.52) forwards;
             animation: ani-1 1s cubic-bezier(0.32, -0.48, 0.69, 1.52) forwards;
   }
-  .main .m1 .m1-info .mob {
-    display: none;
-  }
-  .main .m1 .m1-info .web {
-    width: 50px;
-    font-size: 10px;
-    color: #0210fd;
-    display: inline-block;
-    border: 2px solid #0210fd;
-    border-radius: 20%;
-    text-align: center;
-  }
   .main .m1 .m1-info span {
     text-transform: uppercase;
   }
@@ -1547,6 +1524,7 @@ img {
   }
   .work1 {
     position: relative;
+    height: 100vh;
   }
   .work1 .open {
     top: 6.5%;
@@ -1557,7 +1535,7 @@ img {
   }
   .work1 .bottom {
     position: absolute;
-    bottom: -15%;
+    bottom: -180%;
   }
   .work1 .fb {
     padding-right: 160px;
@@ -1727,7 +1705,7 @@ img {
     height: 5px;
     background-color: #0294FD;
     position: absolute;
-    top: -150%;
+    top: -100%;
     right: 0%;
   }
   .work1 .detail .d1 p:nth-of-type(2)::after {
@@ -1737,7 +1715,7 @@ img {
     height: 5px;
     background-color: #0294FD;
     position: absolute;
-    bottom: -120%;
+    bottom: -100px;
     right: 0%;
   }
   .work1 .detail .d1 p:nth-of-type(1) {
@@ -1747,7 +1725,7 @@ img {
     width: 100%;
   }
   .work1 .detail .d2 {
-    margin: 100px auto;
+    margin: 200px auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
