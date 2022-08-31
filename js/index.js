@@ -1,4 +1,6 @@
 
+function init(){
+
 const elClose = document.querySelector('.close');
 const elOpen = document.querySelector('.open');
 const elBox = document.querySelector('.open ul .box');
@@ -80,3 +82,6 @@ window.addEventListener('mouseover',function(e){
     }
 });
 document.body.style.cursor = 'none';
+
+}
+$(window).on('load',init);
